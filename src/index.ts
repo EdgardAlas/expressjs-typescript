@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 
 import notFoundRoutes from './routes/not-found.routes';
-import testRoutes from './routes/test.routes';
+import routes from './routes/routes';
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ app.use(morgan('dev'));
 
 // NOT FOUND ROUTES
 
-app.use('/', testRoutes);
+app.use(routes);
 app.use('*', notFoundRoutes);
 
 app.listen(PORT, () => {
