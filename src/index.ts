@@ -16,6 +16,8 @@ const app = express();
 app.use(cors());
 app.use(cokieParser());
 app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // NOT FOUND ROUTES
 

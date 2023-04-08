@@ -11,3 +11,7 @@ export const home: RequestHandler = (req, res) => {
     message: 'Hello World',
   });
 };
+
+export const validateBody: RequestHandler = (req, res) => {
+  return res.json(req.body);
+};
